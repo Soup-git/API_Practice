@@ -1,0 +1,15 @@
+<h1>Results Page</h1>
+<%var arr=data["Search"]%>
+<%var no=data["Response"]%>
+<% if(no==="True"){%>
+<% arr.forEach(function(movie){%>
+	<li><%=movie["Title"]%></li>	
+<%})%>
+<%}%>
+<% if(no==="False"){%>
+	<p>
+		Sorry... :( No Such Movie Found
+</p>
+<%}%>
+<br>
+<a href="/">Click Here to back to search page</a>
